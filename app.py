@@ -2,6 +2,8 @@ import os
 import base64
 import time
 from flask import Flask, render_template, send_from_directory
+from keep_alive import keep_alive
+keep_alive()
 
 app = Flask(__name__)
 

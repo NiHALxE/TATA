@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaTa IPL Live</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>TaTa IPL Live</h1>
+        <p>Powered by NiHAL</p>
+    </header>
+    <main id="streams">
+        {% for language in streams %}
+        <div class="video-container">
+            <video controls playsinline>
+                <source src="/stream/{{ language }}" type="application/x-mpegURL">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        {% endfor %}
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
